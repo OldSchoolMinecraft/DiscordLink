@@ -1,0 +1,48 @@
+{
+  "discord": {
+    "join": "__{0}__ has joined.",
+    "leave": "__{0}__ has left.",
+    "death": "__{0}__ has died.",
+    "default": "{0}"
+  },
+  "minecraft": {
+    "default": "§7{0}#{1}§f: {2}",
+    "mention": "§eYou have mentioned §6{0}#{1}§e."
+  },
+  "commands": {
+    "online": "There are currently `{0}` players online",
+    "list": "Online Players ({0}): {1}",
+    "cursed": {
+      "default": "§eCurrent cursed words: {0}",
+      "already-exists": "§cThat word is already cursed!",
+      "added": "§eThe word {0} is now cursed!",
+      "doesnt-exist": "§cThat word is not cursed!",
+      "removed": "§eThe word {0} is no longer cursed!"
+    },
+    "connect": {
+      "noargs": "Include your Minecraft name.",
+      "complete": "Sent a request to `{0}`.",
+      "already": "This user already has a pending request!",
+      "already-self": "You currently have a pending request!"
+    }
+  },
+  "link": {
+    "already-linked": "§7Your account is currently linked to: §8{0}#{1}",
+    "remove": "§7Your account is no longer linked to a Discord!",
+    "attempt": "§8{0}#{1}§7 is trying to link their Discord account with your account, to accept this type: §8/link accept",
+    "success": "§7You have successfully linked your account to §8{0}#{1}§7 on Discord.",
+    "not-linked": "§7Your account isn't linked to a Discord.",
+    "no-request": "§cYou don't have link requests!",
+    "no-link": "§cYour account isn't linked!",
+    "request": "§7You have gotten a link request from §8{0}#{1}§7 on Discord! Use §8/link accept §7or §8/link deny§7.",
+    "denied": "§7You have denied the link from §8{0}#{1}§7 on Discord.",
+    "help": '§7To connect your Minecraft account to your Discord account, go into the OSM Discord server and type §8"!connect {your MC username}§7. Then, navigate to the Minecraft server where a message should appear saying to accept using §8/link accept§7. You should be connected!'
+  },
+  "errors": {
+    "everyone": "§cNice try! Just remember, no one loves you."
+  },
+  "mentions": {
+    "user": "§7{0}#{1}§r",
+    "channel": "§7#{1}§r"
+  }
+}

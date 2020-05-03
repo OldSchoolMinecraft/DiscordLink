@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'maven'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.72'
+}
+
+group 'dev.shog'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    provided
+    compile.extendsFrom(provided)
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation 'com.konghq:unirest-java:3.7.02'
+    implementation 'org.json:json:20190722'
+    implementation "com.discord4j:discord4j-core:3.1.0.M2"
+
+    // For Jar
+    provided 'com.konghq:unirest-java:3.7.02'
+    provided 'org.json:json:20190722'
+    provided "com.discord4j:discord4j-core:3.1.0.M2"
+
+    implementation(files("/libs/OSMPL.jar"))
+    implementation(files("/libs/Project-Poseidon.jar"))
+    implementation(files("/libs/FakeOnline.jar"))
+}
+
+jar {
+    from configurations.provided.asFileTree.files.collect { zipTree(it) }
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}

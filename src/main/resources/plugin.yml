@@ -1,0 +1,22 @@
+name: DiscordLink
+version: 1.0.0
+author: sho
+main: dev.shog.osmlink.DiscordLink
+description: Discord Link for OSM
+commands:
+  discordlink:
+    description: Get the version of DiscordLink
+    usage: /discordlink
+    aliases: ['dl']
+  cursed:
+    description: Manage cursed words.
+    usage: /cursed [add/remove] [word]
+    permission: osm.dl.cursed
+    permission-message: You don't have permission for this!
+  link:
+    description: Link
+    usage: /link
+permissions:
+  osm.dl.cursed:
+    description: Manage the cursed words.
+    default: op
